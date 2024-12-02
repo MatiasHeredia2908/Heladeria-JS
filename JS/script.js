@@ -82,7 +82,41 @@ document.getElementById('carrito-boton').addEventListener('click', function(){
     document.getElementById('totalPrecio').textContent= `Total: $${total}`
 })
 
+document.getElementById('agregarmas-boton').addEventListener('click', function(){
+    document.getElementById('sabores').style.display='none'
+    document.getElementById('carrito').style.display='block'
 
+    document.querySelectorAll('.sabor').forEach(button => {
+        button.classList.remove('sabor-seleccionado')
+    })
+
+    if (carrito.length > 0){
+        carrito[carrito.length - 1].sabores = []
+    }
+})
+
+document.getElementById('atras-boton').addEventListener('click',function(){
+    document.getElementById('carrito').style.display='none'
+    document.getElementById('bienvenida').style.display='block'
+})
+
+document.getElementById('verCarrito-boton').addEventListener('click',function(){
+    document.getElementById('bienvenida').style.display='none'
+    document.getElementById('carrito').style.display='block'
+
+    let listaCarrito = document.getElementById('listaCarrito')
+    listaCarrito.innerHTML = ''
+
+    let total = 0
+    carrito.forEach(item => {
+        let ListaItem = document.createElement('li')
+        ListaItem.textContent = `${item.tamaño.toUpperCase()} - Sabores: ${item.sabores.join(',')} - Precio: $${item.precio}`
+        listaCarrito.appendChild(ListaItem)
+        total += item.precio
+
+        document.getElementById('totalPrecio').textContent = `Total: $${total}`
+})
+})
 
 window.onload = function(){
     let nombre = localStorage.getItem('clienteNombre')
