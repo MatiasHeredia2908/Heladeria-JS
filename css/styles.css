@@ -18,6 +18,11 @@ input{
     text-align: center;
 }
 
-#bienvenida, #sabores {
+#bienvenida, #sabores, #carrito {
     display: none;
+}
+
+.sabor-seleccionado {
+    background-color: black;
+    color: white;
 }

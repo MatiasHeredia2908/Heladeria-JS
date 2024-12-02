@@ -29,20 +29,30 @@
     <div id="bienvenida">
         <p id="bienvenida-nombre"></p>
         <h2>¿Que desea pedir?</h2>
-        <button class="tamaño">Kilo $17.600</button>
-        <button class="tamaño">Medio $11.000</button>
-        <button class="tamaño">Cuarto $6.000</button>
+        <button class="tamaño" data-tamaño="kilo">Kilo</button>
+        <button class="tamaño" data-tamaño="medio">Medio</button>
+        <button class="tamaño" data-tamaño="cuarto">Cuarto</button>
+        <button id="editarBoton">¿No sos vos? Editar informacion</button>
     </div>
     
     <div id="sabores">
         <h3>Seleccione sus sabores:</h3>
-        <button>Chocolate</button>
-        <button>Vainilla</button>
-        <button>Dulce de Leche</button>
-        <button>Frutilla</button>
-        <button>Limon</button>
-        <button>Americana</button>
+        <button class="sabor" data-sabor="chocolate">Chocolate</button>
+        <button class="sabor" data-sabor="vainilla">Vainilla</button>
+        <button class="sabor" data-sabor="dulcedeleche">Dulce de Leche</button>
+        <button class="sabor" data-sabor="frutilla">Frutilla</button>
+        <button class="sabor" data-sabor="limon">Limon</button>
+        <button class="sabor" data-sabor="americana">Americana</button>
+
+        <button id="carrito-boton">Agregar al carrito</button>
     </div>
+
+    <div id="carrito">
+        <h3>Su pedido:</h3>
+        <ul id="listaCarrito"></ul>
+        <p id="totalPrecio"></p>
+    </div>
+
     <script src="./JS/script.js"></script>
 </body>
 </html>
