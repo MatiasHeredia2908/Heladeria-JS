@@ -115,7 +115,31 @@ document.getElementById('verCarrito-boton').addEventListener('click',function(){
         total += item.precio
 
         document.getElementById('totalPrecio').textContent = `Total: $${total}`
+    })
 })
+
+document.getElementById('finalizar-boton').addEventListener('click', function(){
+    if (carrito.length === 0){
+        alert('No hay items en el carrito')
+        return;
+    }
+
+    alert("Gracias por su compra. :)")
+
+    document.getElementById('listaCarrito').innerHTML = ''
+    document.getElementById('totalPrecio').textContent = `Total: $${0}`
+
+    document.getElementById('formualrio').style.display = 'block'
+    document.getElementById('bienvenida').style.display = 'none'
+    document.getElementById('carrito').style.display = 'none'
+
+    document.getElementById('NombreCliente').value = '' 
+    document.getElementById('DireccionCliente').value = '' 
+    document.getElementById('NumeroCliente').value = ''
+
+    localStorage.removeItem('clienteNombre')
+    localStorage.removeItem('clienteDireccion')
+    localStorage.removeItem('clienteNumero')
 })
 
 window.onload = function(){
