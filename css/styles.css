@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+}
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    gap: 20px;
+    flex-direction: column;
+}
+.info-cliente{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+input{
+    text-align: center;
+}
+
+#bienvenida, #sabores {
+    display: none;
+}

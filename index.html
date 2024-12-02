@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="formulario" id="formulario">
+        <div class="info-cliente">
+            <label for="NombreCliente">Nombre:</label>
+            <input type="text" name="NombreCliente" id="NombreCliente" placeholder="Matias">
+        </div>
+        
+        <div class="info-cliente">
+            <label for="DireccionCliente">Dirección:</label>
+            <input type="text" name="DireccionCliente" id="DireccionCliente" placeholder="Direccion">
+        </div>
+        
+        <div class="info-cliente">
+            <label for="NumeroCliente">Numero:</label>
+            <input type="number" name="NumeroCliente" id="NumeroCliente" placeholder="11 1111-1111">
+        </div>
+
+        <button type="button" id="BotonGuardar">Guardar</button>
+    </div>
+
+    <div id="bienvenida">
+        <p id="bienvenida-nombre"></p>
+        <h2>¿Que desea pedir?</h2>
+        <button class="tamaño">Kilo $17.600</button>
+        <button class="tamaño">Medio $11.000</button>
+        <button class="tamaño">Cuarto $6.000</button>
+    </div>
+    
+    <div id="sabores">
+        <h3>Seleccione sus sabores:</h3>
+        <button>Chocolate</button>
+        <button>Vainilla</button>
+        <button>Dulce de Leche</button>
+        <button>Frutilla</button>
+        <button>Limon</button>
+        <button>Americana</button>
+    </div>
+    <script src="./JS/script.js"></script>
+</body>
+</html>
