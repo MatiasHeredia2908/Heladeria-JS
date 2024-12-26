@@ -7,36 +7,39 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <div class="formulario" id="formulario">
-        <div class="info-cliente">
-            <label for="NombreCliente">Nombre:</label>
-            <input type="text" name="NombreCliente" id="NombreCliente" placeholder="Matias">
-        </div>
+    <div class="seccion" id="formulario">
+        <div id="formulario-usuario">
+            <h2>Informacion del Cliente</h2>
+            <div class="info-cliente">
+                <label for="NombreCliente">Nombre:</label>
+                <input type="text" name="NombreCliente" id="NombreCliente">
+            </div>
         
-        <div class="info-cliente">
-            <label for="DireccionCliente">Dirección:</label>
-            <input type="text" name="DireccionCliente" id="DireccionCliente" placeholder="Direccion">
-        </div>
-        
-        <div class="info-cliente">
-            <label for="NumeroCliente">Numero:</label>
-            <input type="number" name="NumeroCliente" id="NumeroCliente" placeholder="11 1111-1111">
+            <div class="info-cliente">
+                <label for="DireccionCliente">Dirección:</label>
+                <input type="text" name="DireccionCliente" id="DireccionCliente" placeholder="Direccion">
+            </div>
+            
+            <div class="info-cliente">
+                <label for="NumeroCliente">Numero:</label>
+                <input type="number" name="NumeroCliente" id="NumeroCliente" placeholder="11 1111-1111">
+            </div>
+            
+            <button type="button" id="BotonGuardar">Guardar</button>  
         </div>
 
-        <button type="button" id="BotonGuardar">Guardar</button>
+            <p id="mensaje-personalizado"></p>
+            <button type="button" id="editarInformacion">Editar Informacion</button>
     </div>
 
-    <div id="bienvenida">
-        <p id="bienvenida-nombre"></p>
+    <div class="seccion" id="seccion-tamaño">
         <h2>¿Que desea pedir?</h2>
         <button class="tamaño" data-tamaño="kilo">Kilo</button>
         <button class="tamaño" data-tamaño="medio">Medio</button>
         <button class="tamaño" data-tamaño="cuarto">Cuarto</button>
-        <button id="editarBoton">¿No sos vos? Editar informacion</button>
-        <button id="verCarrito-boton">Ver Carrito</button>
     </div>
     
-    <div id="sabores">
+    <div class="seccion" id="seccion-sabores">
         <h3>Seleccione sus sabores:</h3>
         <button class="sabor" data-sabor="chocolate">Chocolate</button>
         <button class="sabor" data-sabor="vainilla">Vainilla</button>
@@ -45,15 +48,13 @@
         <button class="sabor" data-sabor="limon">Limon</button>
         <button class="sabor" data-sabor="americana">Americana</button>
 
-        <button id="carrito-boton">Agregar al carrito</button>
-        <button id="agregarmas-boton">Agregar mas al pedido</button>
+        <button id="agregarmas-boton">Agregar al Carrito</button>
     </div>
 
-    <div id="carrito">
+    <div class="seccion" id="seccion-carrito">
         <h3>Su pedido:</h3>
         <ul id="listaCarrito"></ul>
         <p id="totalPrecio"></p>
-        <button id="atras-boton">Atras</button>
         <button id="finalizar-boton">Finalizar Compra</button>
     </div>
 
