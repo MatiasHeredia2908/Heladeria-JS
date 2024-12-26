@@ -21,7 +21,10 @@ document.getElementById('BotonGuardar').addEventListener('click', function(){
         document.getElementById('editarInformacion').style.display = 'block';
         document.getElementById('mensaje-personalizado').style.display = 'block';
     } else {
-        alert('Por favor, completa todos los campos.');
+        Swal.fire({
+            text: "Por favor, completa todos los campos.",
+            icon: "warning"
+          })
     }
 });
 
@@ -87,7 +90,10 @@ document.querySelectorAll('.sabor').forEach(button => {
 
 document.getElementById('agregarmas-boton').addEventListener('click', function(){
     if (!itemActual || itemActual.sabores.length === 0){
-        alert('Debes seleccionar un tamaño y al menos un sabor')
+        Swal.fire({
+            text: "Por favor, debes seleccionar al menos un sabor.",
+            icon: "warning"
+          })
         return;
     }
 
@@ -122,11 +128,19 @@ document.getElementById('agregarmas-boton').addEventListener('click', function()
 
 document.getElementById('finalizar-boton').addEventListener('click', function(){
     if (carrito.length === 0){
-        alert('No hay items en el carrito')
+        Swal.fire({
+            title: "Pedido rechazado",
+            text: "No hay items en el carrito",
+            icon: "error"
+        })
         return;
     }
 
-    alert("Gracias por su compra. Su pedido ha sido enviado :)")
+    Swal.fire({
+        title: "Pedido enviado",
+        text: "Su pedido fue enviado y pronto estará en camino",
+        icon: "success"
+    })
 
     document.getElementById('listaCarrito').innerHTML = ''
     document.getElementById('totalPrecio').textContent = `Total: $${0}`
